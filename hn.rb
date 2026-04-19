@@ -5,21 +5,21 @@
 class Hn < Formula
   desc "A terminal-based Hacker News client"
   homepage "https://github.com/heartleo/hn-cli"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/heartleo/hn-cli/releases/download/v0.0.4/hn_0.0.4_darwin_x86_64.tar.gz"
-      sha256 "90c3606bddfd0c78e30bb4c32e848a63862eb72ed328340e526cf4265e5fcaf3"
+      url "https://github.com/heartleo/hn-cli/releases/download/v0.0.5/hn_0.0.5_darwin_x86_64.tar.gz"
+      sha256 "a89f1d1cc2bd40fd5e2302f1025e7dfbe736e4ec47d595d543f9fd7924cfd7aa"
 
       define_method(:install) do
         bin.install "hn"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/heartleo/hn-cli/releases/download/v0.0.4/hn_0.0.4_darwin_arm64.tar.gz"
-      sha256 "10c6341a6812a54ff09bea875207424cd6f04a6673bfe1a814e549f1ba2dd5f0"
+      url "https://github.com/heartleo/hn-cli/releases/download/v0.0.5/hn_0.0.5_darwin_arm64.tar.gz"
+      sha256 "5005a89b0f6da20b12ca1b1b5c620c550504b3e61ea18f375d3b3ed66e564c8a"
 
       define_method(:install) do
         bin.install "hn"
@@ -29,15 +29,15 @@ class Hn < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/heartleo/hn-cli/releases/download/v0.0.4/hn_0.0.4_linux_x86_64.tar.gz"
-      sha256 "65102dc6f87c823d1a36c3fa3ca5991397ee580d9a958a7c805d307f7a14f161"
+      url "https://github.com/heartleo/hn-cli/releases/download/v0.0.5/hn_0.0.5_linux_x86_64.tar.gz"
+      sha256 "19c5ac3acaada44b390d5e16b9c4be32a1791be5f06fd954eecf44d18753b6ba"
       define_method(:install) do
         bin.install "hn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/heartleo/hn-cli/releases/download/v0.0.4/hn_0.0.4_linux_arm64.tar.gz"
-      sha256 "5c4053181f0f81473a0ea0e838063ab2dd502c9e1e80cd8f41327687e37dcb17"
+      url "https://github.com/heartleo/hn-cli/releases/download/v0.0.5/hn_0.0.5_linux_arm64.tar.gz"
+      sha256 "e8de7646a42e6a7b4ee91dd9c71f1b557a8751a8221bf5e249c51d6f774cc96b"
       define_method(:install) do
         bin.install "hn"
       end
