@@ -5,21 +5,21 @@
 class Subtrans < Formula
   desc "Translate SRT subtitle files using OpenAI-compatible APIs"
   homepage "https://github.com/heartleo/subtrans"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/heartleo/subtrans/releases/download/v0.0.2/subtrans_0.0.2_darwin_x86_64.tar.gz"
-      sha256 "f478bf5bc3dd391731298296cf7a606fa6553544ac985962005df648a937cecf"
+      url "https://github.com/heartleo/subtrans/releases/download/v0.0.3/subtrans_0.0.3_darwin_x86_64.tar.gz"
+      sha256 "e2cf5952d95f9098e4680ab192985a6a1054610b68a206c1f4146181d011d844"
 
       define_method(:install) do
         bin.install "subtrans"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/heartleo/subtrans/releases/download/v0.0.2/subtrans_0.0.2_darwin_arm64.tar.gz"
-      sha256 "68fc0612ffd8b6e89ead8837f3475400af7ab63df828029af9ccfb9bc18a0af9"
+      url "https://github.com/heartleo/subtrans/releases/download/v0.0.3/subtrans_0.0.3_darwin_arm64.tar.gz"
+      sha256 "4825b339dba65136ea3c88d53ded72e4f9a3e8c06ee776f4c9ba26d28bbe5cc9"
 
       define_method(:install) do
         bin.install "subtrans"
@@ -29,15 +29,15 @@ class Subtrans < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/heartleo/subtrans/releases/download/v0.0.2/subtrans_0.0.2_linux_x86_64.tar.gz"
-      sha256 "390034f2a65676a7e6d0d25262b626dcc415fcf8f2b7ef2f6b0fb63e6d132bc8"
+      url "https://github.com/heartleo/subtrans/releases/download/v0.0.3/subtrans_0.0.3_linux_x86_64.tar.gz"
+      sha256 "f87d5ed220f5b936eed8a194649850d33582765f4d91ef848dc2842b0b3b2788"
       define_method(:install) do
         bin.install "subtrans"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/heartleo/subtrans/releases/download/v0.0.2/subtrans_0.0.2_linux_arm64.tar.gz"
-      sha256 "a8137da85f2cce82d6095f61dc576229b053b01fe9955e6aa182df24bd13988a"
+      url "https://github.com/heartleo/subtrans/releases/download/v0.0.3/subtrans_0.0.3_linux_arm64.tar.gz"
+      sha256 "7a8659a28f78cbcd0a9d3a005b4b239452aa9e76f41c4c9b69ee127df2c8015d"
       define_method(:install) do
         bin.install "subtrans"
       end
