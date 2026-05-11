@@ -5,21 +5,21 @@
 class Webdav115drive < Formula
   desc "A read-only WebDAV proxy for 115 Drive"
   homepage "https://github.com/heartleo/webdav-115drive"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/heartleo/webdav-115drive/releases/download/v0.1.3/webdav-115drive_v0.1.3_darwin_amd64.tar.gz"
-      sha256 "f747c8b21655464e712285bbe24468dfd6d623fe159ba3d82d327875f9109b04"
+      url "https://github.com/heartleo/webdav-115drive/releases/download/v0.1.4/webdav-115drive_v0.1.4_darwin_amd64.tar.gz"
+      sha256 "70ba272c739cd911902180f63c4ffd3d75a5fa6bb8d8d2869870715bfc4b4026"
 
       define_method(:install) do
         bin.install "webdav-115drive"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/heartleo/webdav-115drive/releases/download/v0.1.3/webdav-115drive_v0.1.3_darwin_arm64.tar.gz"
-      sha256 "d59cb42083c239d8aeae0363398c92cf0d93eb85122e9d31e2e0c1515f689123"
+      url "https://github.com/heartleo/webdav-115drive/releases/download/v0.1.4/webdav-115drive_v0.1.4_darwin_arm64.tar.gz"
+      sha256 "d38e5a13cd4e676a5fb55d74a0c08e5fc0932d841084e6d1fcccc0b6d34f413e"
 
       define_method(:install) do
         bin.install "webdav-115drive"
@@ -29,15 +29,22 @@ class Webdav115drive < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/heartleo/webdav-115drive/releases/download/v0.1.3/webdav-115drive_v0.1.3_linux_amd64.tar.gz"
-      sha256 "cc7e7ce9b585cd0884cd089f439c48326085d7fe529a4dcc0a0ab257902381d9"
+      url "https://github.com/heartleo/webdav-115drive/releases/download/v0.1.4/webdav-115drive_v0.1.4_linux_amd64.tar.gz"
+      sha256 "702a660456a5c4761d60e587e266fb4ffe9c5a2be0a5539c1b7b8d2423af87ce"
+      define_method(:install) do
+        bin.install "webdav-115drive"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/heartleo/webdav-115drive/releases/download/v0.1.4/webdav-115drive_v0.1.4_linux_armv6.tar.gz"
+      sha256 "35581633daacbde5e72c8888174ed208112e00a51e6ce7dfe8d579c8af167e13"
       define_method(:install) do
         bin.install "webdav-115drive"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/heartleo/webdav-115drive/releases/download/v0.1.3/webdav-115drive_v0.1.3_linux_arm64.tar.gz"
-      sha256 "b7d8aea3f80b20debbb3304c0c714b1a4fa4be5afdc7ffcabfc8b12039124e93"
+      url "https://github.com/heartleo/webdav-115drive/releases/download/v0.1.4/webdav-115drive_v0.1.4_linux_arm64.tar.gz"
+      sha256 "20030e0bb833daaa97fb2b6eb0fda4cb72f0e30d9215ed7d44c57bad6eb1c152"
       define_method(:install) do
         bin.install "webdav-115drive"
       end
@@ -45,6 +52,6 @@ class Webdav115drive < Formula
   end
 
   test do
-    assert_path_exists bin/"webdav-115drive"
+    system "#{bin}/webdav-115drive", "--version"
   end
 end
