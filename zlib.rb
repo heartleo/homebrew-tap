@@ -5,21 +5,21 @@
 class Zlib < Formula
   desc "A CLI for Z-Library"
   homepage "https://github.com/heartleo/zlib"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/heartleo/zlib/releases/download/v0.0.6/zlib_0.0.6_darwin_x86_64.tar.gz"
-      sha256 "144269541d359765b7c0ff0faaa5c6d7643085a15671cdb058a2e69f2cac8581"
+      url "https://github.com/heartleo/zlib/releases/download/v0.0.7/zlib_0.0.7_darwin_x86_64.tar.gz"
+      sha256 "f7e62e4f4b989e11bfd6f96a1da64886446b53b498bdc482fe32ad4c264d7a9e"
 
       define_method(:install) do
         bin.install "zlib"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/heartleo/zlib/releases/download/v0.0.6/zlib_0.0.6_darwin_arm64.tar.gz"
-      sha256 "254d845f142f3d9ab6679ad60b806577443ecca6965ce4ba7f30c08f75b1b756"
+      url "https://github.com/heartleo/zlib/releases/download/v0.0.7/zlib_0.0.7_darwin_arm64.tar.gz"
+      sha256 "74e6958ff0b35c32204262f09b6db2396acc891022e9d0ea8c689a3f84e2541d"
 
       define_method(:install) do
         bin.install "zlib"
@@ -29,15 +29,15 @@ class Zlib < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/heartleo/zlib/releases/download/v0.0.6/zlib_0.0.6_linux_x86_64.tar.gz"
-      sha256 "daab24f9e324f526b94006f7dd21eadd08bdaffd5bb91614caec1e5d5339df5b"
+      url "https://github.com/heartleo/zlib/releases/download/v0.0.7/zlib_0.0.7_linux_x86_64.tar.gz"
+      sha256 "448ab0cf7cadab477dbc3cae3d600c2dfecc8eae9cb9afdef7e6f04ce8c3273a"
       define_method(:install) do
         bin.install "zlib"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/heartleo/zlib/releases/download/v0.0.6/zlib_0.0.6_linux_arm64.tar.gz"
-      sha256 "17c808e11803e9be93456bf99f99a1333e2cefc2c3b130e060204e231f862f8b"
+      url "https://github.com/heartleo/zlib/releases/download/v0.0.7/zlib_0.0.7_linux_arm64.tar.gz"
+      sha256 "69af9a6b4fba63c83378ec0360e96d47e413ad69692bfde153ddede9e552497f"
       define_method(:install) do
         bin.install "zlib"
       end
