@@ -44,6 +44,14 @@ class ZlibCli < Formula
     end
   end
 
+  def caveats
+    <<~EOS
+      The Homebrew formula is now zlib-cli. For future installations, use:
+        brew install heartleo/tap/zlib-cli
+      The executable is still named zlib.
+    EOS
+  end
+
   test do
     system "#{bin}/zlib", "--version"
   end
