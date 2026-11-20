@@ -10,14 +10,16 @@ Homebrew formulae for [heartleo](https://github.com/heartleo)'s tools.
 > brew install heartleo/tap/zlib-cli
 > ```
 >
-> Already installed `zlib` from this tap? Refresh the tap and upgrade:
+> Installed the old `zlib` formula from this tap? Homebrew does not move it to
+> the new name, and `brew upgrade` never updates it. Replace it once. The first
+> command removes `zlib` only when it is the old command, never Homebrew's own
+> library:
 >
 > ```bash
-> brew update && brew upgrade heartleo/tap/zlib-cli
+> brew list zlib | grep -q bin/zlib && brew uninstall zlib
+> brew install heartleo/tap/zlib-cli
 > ```
 >
-> The installed command is still `zlib`. Rename details are in
-> `formula_renames.json`; Homebrew maps the old name to the new one when the tap
-> is up to date.
+> The installed command is still `zlib`.
 >
 > Project: [heartleo/zlib](https://github.com/heartleo/zlib), a CLI for Z-Library.
